@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</h2>
+    <meta name="description" content="Explore stunning images from our gallery.">
 </head>
 <body>
     <h1>Gallery</h1>
     <div>
-        <img src='https://example.com/image1.jpg' alt='Image 1'>
-        <img src='https://example.com/image2.jpg' alt='Image 2'>
+        <img src='https://example.com/image1.jpg' alt='Image 1' loading='lazy'>
+        <img src='https://example.com/image2.jpg' alt='Image 2' loading='lazy'>
         <!-- Add more images as needed -->
     </div>
     <nav>
@@ -17,5 +18,28 @@
         <a href='blog.html'>Blog</a>
         <a href='gallery.html'>Gallery</a>
     </nav>
+
+    <!-- Modal for image details -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="myImg">
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the modal
+        function openModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
